@@ -1,4 +1,5 @@
 import axios from 'axios';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 
 function ProductList() {
@@ -15,7 +16,20 @@ function ProductList() {
       <ul>
         {products &&
           products.map(product => {
-            return <li key={product.id}>{product.name}</li>;
+            return (
+              <li key={product.id}>
+                <div>
+                  <Image
+                    src={product.imageUrl}
+                    width={300}
+                    height={300}
+                    alt={product.name}
+                  />
+                </div>
+                <div>{product.name}</div>
+                <div>{product.price}</div>
+              </li>
+            );
           })}
       </ul>
     </>
