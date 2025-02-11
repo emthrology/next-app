@@ -27,4 +27,18 @@ function createCartItem({ id, name, imageUrl, price }) {
   });
 }
 
-export { fetchProducts, fetchProductById, createCartItem };
+function fetchCarts() {
+  return instance.get(`/carts`);
+}
+
+function deleteCartItem(id) {
+  return instance.delete(`/carts/${id}`);
+}
+
+export {
+  fetchProducts,
+  fetchProductById,
+  createCartItem,
+  fetchCarts,
+  deleteCartItem,
+};
