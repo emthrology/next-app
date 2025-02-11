@@ -11,7 +11,7 @@ function ProductList() {
     fetchProducts().then(response => {
       setProducts(response.data);
     });
-  }, []);
+  }, []); //초기값이 있어야 한번만 실행된다
 
   return (
     <>

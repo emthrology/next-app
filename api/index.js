@@ -5,7 +5,7 @@ const instance = axios.create({
 });
 
 /**
- * 상품목록 조회
+ * @description 상품목록 조회
  * @returns ProductList
  */
 function fetchProducts() {

@@ -3,8 +3,6 @@ import CartList from '@/components/cart/CartList';
 import { fetchCarts } from '@/api';
 
 function CartPage({ carts }) {
-  //props의 destructuring
-  console.log(carts, 33333);
   return (
     <>
       <CartHeader />
