@@ -23,3 +23,10 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+/**
+ * @description data-cy 선택자로 설정된 element를 쉽게 찾는 커스텀 API
+ */
+Cypress.Commands.add('getByCy', (text) => {
+  return cy.get(`[data-cy=${text}]`);
+});
